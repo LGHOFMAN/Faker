@@ -25,12 +25,13 @@ class Image extends Base
      * @param bool $randomize
      * @param string|null $word
      * @param bool $gray
+     * @param string $imageProvider
      *
      * @return string
      */
-    public static function imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false)
+    public static function imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false, $imageProvider = "https://lorempixel.com/")
     {
-        $baseUrl = "https://lorempixel.com/";
+        $baseUrl = $imageProvider;
         $url = "{$width}/{$height}/";
 
         if ($gray) {
